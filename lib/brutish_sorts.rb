@@ -1,5 +1,9 @@
-class BrutishSorts
-  require 'brutish_sorts/selection_sort'
+require 'brutish_sorts/core'
+require 'brutish_sorts/selection_sort'
+
+module BrutishSorts
+  extend self
+
   def self.selection_sort(array)
     pivot = 0
     for i in 0..array.length - 1
