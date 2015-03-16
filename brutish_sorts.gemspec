@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'brutish_sorts'
-  s.version     = '1.0.0'
+  s.version     = '1.1.0'
   s.date        = '2014-03-15'
   s.summary     = "Brutish Sorts"
   s.description = "Unpolished sorts: selection sort, insertion sort"

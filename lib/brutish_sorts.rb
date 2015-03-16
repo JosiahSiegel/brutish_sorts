@@ -4,29 +4,31 @@ require 'brutish_sorts/selection_sort'
 module BrutishSorts
   extend self
 
-  def self.selection_sort(array)
+  def selection_sort(array)
+    dup = array.dup
     pivot = 0
-    for i in 0..array.length - 1
-      pivot = SelectionSort.min_index(array,i)
-      array = SelectionSort.swap(array,pivot,i)
+    for i in 0..dup.length - 1
+      pivot = SelectionSort.min_index(dup,i)
+      dup = SelectionSort.swap(dup,pivot,i)
     end
-    array
+    dup
   end
 
-  def self.insertion_sort(array)
+  def insertion_sort(array)
+    dup = array.dup
     tmp = 0
-    0.upto(array.length - 1) do |a|
+    0.upto(dup.length - 1) do |a|
       a.downto(0) do |b|
-        if b < (array.length - 1)
-          if array[b + 1] < array[b]
-            tmp = array[b]
-            array[b] = array[b + 1]
-            array[b + 1] = tmp
+        if b < (dup.length - 1)
+          if dup[b + 1] < dup[b]
+            tmp = dup[b]
+            dup[b] = dup[b + 1]
+            dup[b + 1] = tmp
           end
         end
       end
     end
-    array
+    dup
   end
 
 end
